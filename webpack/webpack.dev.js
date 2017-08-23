@@ -13,6 +13,7 @@ const root = (...args) => {
 
     return path.join.apply(null, [rootPath].concat(args));
 };
+const example = (...args) => root.apply(null, ['example'].concat(args));
 const src = (...args) => root.apply(null, ['src'].concat(args));
 
 module.exports = {
@@ -22,8 +23,8 @@ module.exports = {
     },
     devtool: 'cheap-module-eval-source-map',
     entry: {
-        app: [ src('index.tsx') ],
-        vendor: [ src('vendor.ts') ]
+        app: [ example('App.tsx') ],
+        vendor: [ example('vendor.ts') ]
     },
     module: {
         rules: [
@@ -57,7 +58,7 @@ module.exports = {
             },
             filename: 'index.html',
             inject: 'body',
-            template: src('index.html')
+            template: example('index.html')
         }),
         new LoaderOptionsPlugin({
             debug: true,
