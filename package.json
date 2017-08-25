@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "g": "node ./tasks/generate",
+    "lint": "tslint ./src/**/*.{ts,tsx}",
     "test": "jest --coverage",
     "test:watch": "jest --watch --coverage",
     "start": "webpack-dev-server --config webpack/webpack.dev.js"
@@ -25,6 +26,8 @@
     "react-test-renderer": "^15.6.1",
     "source-map-loader": "^0.2.1",
     "ts-jest": "^20.0.10",
+    "tslint": "^5.6.0",
+    "tslint-react": "^3.2.0",
     "typescript": "^2.4.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
