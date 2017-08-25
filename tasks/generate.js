@@ -185,17 +185,12 @@ const getDOM = (tag) => `<div>${ tag }</div>;`;
 
 const getSpec = (tag) =>
 `import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import { ${ tag } } from '../${ tag }';
 
 describe('Component: ${ tag }', () => {
-    test('renders', () => {
-        const div = document.createElement('div');
-
-        ReactDOM.render(
-            <${ tag } />,
-            div
-        );
+    test('should render without error', () => {
+        expect(shallow(<${ tag } />).contains('<div>${ tag }</div>')).toBe(true);
     });
 });
 
