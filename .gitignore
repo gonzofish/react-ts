@@ -1,2 +1,4 @@
+*.log*
+build
 coverage
 node_modules
