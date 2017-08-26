@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "b": "tsc -p ./configs/tsconfig.es5.json",
+    "build": "node ./tasks/build",
     "g": "node ./tasks/generate",
     "lint": "tslint ./src/**/*.{ts,tsx}",
+    "prebuild": "rimraf dist out-tsc",
     "test": "jest --coverage",
     "test:watch": "jest --watch --coverage",
     "start": "webpack-dev-server --config webpack/webpack.dev.js"
