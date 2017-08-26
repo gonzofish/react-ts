@@ -1,8 +1,12 @@
 {
-  "name": "react-ts",
-  "version": "1.0.0",
+  "name": "react-lib-ts",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "react-lib-ts.es5.js",
+  "module": "react-lib-ts.es5.js",
+  "jsnext:main": "react-lib-ts.js",
+  "es2015": "react-lib-ts.js",
+  "typings": "index.d.ts",
   "scripts": {
     "b": "tsc -p ./configs/tsconfig.es5.json",
     "build": "node ./tasks/build",
