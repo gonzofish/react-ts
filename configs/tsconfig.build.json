@@ -1,8 +1,11 @@
 {
+    "compilerOptions": {
+        "declaration": true
+    },
     "exclude": [
-        "../example",
         "../**/*.spec.ts",
         "../**/*.spec.tsx"
     ],
+    "include": ["../src"],
     "extends": "../tsconfig.json"
 }
