@@ -3,6 +3,7 @@
         "forkChecker": true
     },
     "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
         "jsx": "react",
         "lib": ["es2015", "dom"],
         "module": "es2015",

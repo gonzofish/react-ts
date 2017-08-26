@@ -163,7 +163,7 @@ const getComponent = (tag, type) =>
     type === 'class' ? getClassComponent(tag) : getFunctionalComponent(tag);
 
 const getClassComponent = (tag) =>
-`import * as React from 'react';
+`import React from 'react';
 
 export class ${ tag } extends React.Component<any, undefined> {
     render() {
@@ -174,7 +174,7 @@ export class ${ tag } extends React.Component<any, undefined> {
 `;
 
 const getFunctionalComponent = (tag) =>
-`import * as React from 'react';
+`import React from 'react';
 
 export const ${ tag } = (props: any) =>
     ${ getDOM(tag) }
@@ -184,8 +184,9 @@ export const ${ tag } = (props: any) =>
 const getDOM = (tag) => `<div>${ tag }</div>;`;
 
 const getSpec = (tag) =>
-`import * as React from 'react';
+`import from 'react';
 import { shallow } from 'enzyme';
+
 import { ${ tag } } from '../${ tag }';
 
 describe('Component: ${ tag }', () => {
